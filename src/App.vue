@@ -13,13 +13,12 @@ function changeTheme() {
       <v-spacer></v-spacer>
       <v-btn :prepend-icon="theme === 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'" text="Toggle theme"
         @click="changeTheme">
-
       </v-btn>
     </v-app-bar>
-    <v-container class="d-flex" :oncontextmenu="(e: Event) => e.preventDefault()">
-      <ClickButton />
-      <ClickButton />
-      <ClickButton />
+    <v-container class="d-flex flex-wrap" :oncontextmenu="(e: Event) => e.preventDefault()">
+      <ClickButton click="Main"/>
+      <ClickButton click="Auxiliary"/>
+      <ClickButton click="Secondary"/>
     </v-container>
   </v-app>
 </template>
